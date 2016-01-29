@@ -21,11 +21,10 @@ Pizza.prototype.sizePrice = function() {
   } else {
     basePrice += 10;
   };
-  return(basePrice)
+  return(basePrice);
 };
 
 Topping.prototype.addTopping = function() {
-  if (this.price === 0) {return 0}
   return totalToppingPrice += this.price;
 };
 
@@ -69,8 +68,8 @@ $(document).ready(function() {
         $(".display-topping").append("<li>" + testTopping.toppingName + "</li>");
       });
       if($("#frmtest input:checked").length > 1) {
-        totalToppingPrice = 0
-      }
+        totalToppingPrice = 0;
+      };
       $(".finalPrice").text(basePrice + totalToppingPrice);
       event.preventDefault();
     });

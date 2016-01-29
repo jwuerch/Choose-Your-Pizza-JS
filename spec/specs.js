@@ -21,7 +21,7 @@ describe("Pizza", function() {
   });
 
   it("returns base price plus total topping price", function() {
-    expect(myPizza.totalPrice()).to.equal(5);
+    expect(myPizza.totalPrice()).to.equal(7.5);
   });
 
 });

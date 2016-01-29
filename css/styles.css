@@ -17,6 +17,7 @@ h1 {
 h4 {
   padding-bottom:5px;
 }
+
 .h4-2 {
   padding-bottom:13px;
 }
@@ -54,10 +55,10 @@ p {
   display:none;
 }
 
-
 .display-toppings {
   height:250px;
 }
+
 .row2 {
   display:none;
 }
