@@ -55,6 +55,7 @@ Pizza.prototype.totalPrice = function() {
 // var chorizo = new Topping("chorizo", 3);
 $(document).ready(function() {
   $("#sizeBtn").click(function() {
+    $(".display-size").show();
     basePrice = 0;
     var input1 = $("#choice").val();
     var testPizza = new Pizza(input1);
@@ -69,6 +70,7 @@ $(document).ready(function() {
         var val = $(this).val()
         var input2 = val;
         var input3 = "";
+        /** Decides What input3 will be based on input2 **/
         if ((val === "bacon") || (val === "pepperoni")) {
           input3 = 2;
         } else if ((val === "pineapple") || (val === "mushrooms")) {
@@ -76,10 +78,10 @@ $(document).ready(function() {
         } else {
           input3 = 3;
         };
+
         var testTopping = new Topping(input2,input3);
         testTopping.addTopping();
         $(".display-topping").append("<li>" + testTopping.toppingName + "</li>");
-        console.log(totalToppingPrice);
       });
       event.preventDefault();
     });
