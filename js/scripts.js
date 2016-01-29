@@ -1,5 +1,7 @@
+/** Giving Pizza a base price of 0 **/
 var basePrice = 0
 
+/** Creation of Constructor Functions **/
 function Pizza(diameter) {
   this.diameter = diameter;
 };
@@ -9,7 +11,7 @@ function Topping(toppingName, price) {
   this.price = price;
 };
 
-
+/** Prototype Methods **/
 Pizza.prototype.sizePrice = function() {
   var pizzaPrice = basePrice;
   if (this.diameter === "small") {
@@ -24,17 +26,20 @@ Pizza.prototype.sizePrice = function() {
 
 Pizza.prototype.addTopping = function(topping) {
   return basePrice += topping.price;
-}
+};
 
 Pizza.prototype.removeTopping = function(topping) {
   return basePrice -= topping.price
-}
+};
 
-========jQuery==========
+/************************ jQuery *******************************/
 
+/** List of Toppings **/
 var pineapple = new Topping("pineapple", 2.50);
 var pepperoni = new Topping("pepperoni", 2);
 var mushrooms = new Topping("mushrooms", 1.50);
 var sausage = new Topping("sausage", 3);
 var chorizo = new Topping("chorizo", 4);
 var bacon = new Topping("bacon", 2);
+
+$("")
