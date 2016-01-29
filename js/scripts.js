@@ -7,6 +7,8 @@ function Topping(toppingName, price) {
   this.price = price;
 };
 
+var basePrice = 0
+
 // var pineapple = new Topping("pineapple", 2.50);
 // var pepperoni = new Topping("pepperoni", 2);
 // var mushrooms = new Topping("mushrooms", 1.50);
@@ -16,7 +18,7 @@ function Topping(toppingName, price) {
 
 
 Pizza.prototype.sizePrice = function() {
-  var pizzaPrice = 0;
+  var pizzaPrice = basePrice;
   if (this.diameter === "small") {
     pizzaPrice += 5;
   } else if (this.diameter === "medium") {
@@ -28,6 +30,5 @@ Pizza.prototype.sizePrice = function() {
 };
 
 Pizza.prototype.addTopping = function(topping) {
-  var toppingPrice = 0
-  console.log(toppingPrice += topping.price)
+  return basePrice += topping.price;
 }

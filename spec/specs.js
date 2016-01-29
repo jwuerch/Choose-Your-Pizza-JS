@@ -15,9 +15,11 @@ describe("Pizza", function() {
     expect(myPizza.sizePrice()).to.equal(5);
   });
 
-  it("adds a topping", function() {
+  it("adds one topping", function() {
     expect(myPizza.addTopping(sampleTopping)).to.equal(2.5);
   });
+
+  it
 
   it("removes a topping", function() {
     expect(myPizza.removeTopping(sampleTopping)).to.equal(-2.5);
