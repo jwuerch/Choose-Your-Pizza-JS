@@ -1,16 +1,23 @@
 function Pizza(diameter, toppings) {
   this.diameter = diameter;
   this.toppings = toppings;
-}
+};
 
 function Toppings(toppingName, price) {
   this.toppingName = toppingName;
   this.price = price;
-}
+};
+
+var pineapple = new Toppings("pineapple", 2.50);
+var pepperoni = new Toppings("pepperoni", 2);
+var mushrooms = new Toppings("mushrooms", 1.50);
+var sausage = new Toppings("sausage", 3);
+var chorizo = new Toppings("chorizo", 4);
 
 
-Pizza.prototype.price = function() {
-  var pizzaPrice = 0
+Pizza.prototype.price = function(toppingsList) {
+  var toppingsArray = [];
+  var pizzaPrice = 0;
   /** Conditional Statement For Pizza Size **/
   if (this.diameter = "small") {
     pizzaPrice += 5;
@@ -19,6 +26,6 @@ Pizza.prototype.price = function() {
   } else {
     pizzaPrice += 10;
   };
-  /** Conditional Statement For Pizza Toppings **/
+  return pizzaPrice
 
-}
+};
