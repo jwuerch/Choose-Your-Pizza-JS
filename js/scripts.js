@@ -47,6 +47,7 @@ Pizza.prototype.totalPrice = function() {
 $(document).ready(function() {
   $("#sizeBtn").click(function() {
     $(".display-size").show();
+    $("#buttonalign").show();
     $(".choose-toppings").show();
     basePrice = 0;
     var input1 = $("#choice").val();

@@ -10,8 +10,10 @@ h1 {
   height:200px;
 }
 
-
-
+#buttonalign {
+  margin-left:15px;
+  display:none;
+}
 h4 {
   padding-bottom:5px;
 }
@@ -22,16 +24,6 @@ h4 {
 .form-control {
   margin-bottom:15px;
   width:80%;
-}
-
-.row {
-  padding-top:5px;
-  padding-left:10px;
-}
-
-.choose-toppings {
-  padding-top:5px;
-  padding-left:10px;
 }
 
 #sizeBtn {
