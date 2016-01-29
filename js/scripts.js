@@ -46,13 +46,6 @@ Pizza.prototype.totalPrice = function() {
 /************************ jQuery *******************************/
 
 $(document).ready(function() {
-  /** List of Toppings **/
-  var pineapple = new Topping("pineapple", 2.50);
-  var pepperoni = new Topping("pepperoni", 2);
-  var mushrooms = new Topping("mushrooms", 1.50);
-  var sausage = new Topping("sausage", 3);
-  var chorizo = new Topping("chorizo", 4);
-  var bacon = new Topping("bacon", 2);
 
   $("#sizeBtn").click(function() {
     basePrice = 0;
@@ -69,11 +62,18 @@ $(document).ready(function() {
       $(".display-topping").empty();
 
       $(":checkbox:checked").each(function(i) {
-        var val = $(this).val();
-        var input2 = $(this).val();
-        console.log(val);
-        val = new Topping(input2, 3);
-        console.log(val.toppingName);
+        var val = $(this).val()
+        var input2 = val;
+        var input3 = "";
+        if ((val === "bacon") || (val === "pepperoni")) {
+          input3 = 2;
+        } else if ((val === "pineapple") || (val === "mushrooms")) {
+          input3 = 1;
+        } else {
+          input3 = 3;
+        };
+        var addMyTopping = new Topping(input2,input3);
+        console.log(addMyTopping);
 
 
       });
