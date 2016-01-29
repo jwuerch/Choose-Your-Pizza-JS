@@ -17,7 +17,7 @@ describe("Pizza", function() {
   });
 
   it("adds one topping", function() {
-    expect(myPizza.addTopping(sampleTopping)).to.equal(2.5);
+    expect(sampleTopping.addTopping()).to.equal(2.5);
   });
 
   it("removes one topping and won't result in a negative topping price", function() {

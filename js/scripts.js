@@ -25,8 +25,8 @@ Pizza.prototype.sizePrice = function() {
 };
 
 
-Pizza.prototype.addTopping = function(topping) {
-  return totalToppingPrice += topping.price;
+Topping.prototype.addTopping = function() {
+  return totalToppingPrice += this.price;
 };
 
 Pizza.prototype.removeTopping = function(topping) {
@@ -35,7 +35,6 @@ Pizza.prototype.removeTopping = function(topping) {
   } else {
     totalToppingPrice = totalToppingPrice -= topping.price
   };
-  console.log(totalToppingPrice);
   return totalToppingPrice;
 };
 
@@ -48,7 +47,7 @@ Pizza.prototype.totalPrice = function() {
 
 $(document).ready(function() {
   /** List of Toppings **/
-  var pineapple= new Topping("pineapple", 2.50);
+  var pineapple = new Topping("pineapple", 2.50);
   var pepperoni = new Topping("pepperoni", 2);
   var mushrooms = new Topping("mushrooms", 1.50);
   var sausage = new Topping("sausage", 3);
@@ -57,32 +56,34 @@ $(document).ready(function() {
 
   $("#sizeBtn").click(function() {
     basePrice = 0;
-    var toppingArray = []
     var input1 = $("#choice").val();
     var testPizza = new Pizza(input1);
     var testPizzaPrice = $(testPizza.sizePrice(input1));
     $(".spanSize").text(testPizza.diameter)
-    console.log("base price is " + basePrice)
 
 
 
     $("#addTopBtn").click(function(event) {
+      var toppingArray = []
+      totalToppingPrice = 0;
       $(".display-topping").empty();
 
-      $(":checkbox:checked").each(function(i){
-        var value = $(this).val();
-        console.log(value);
-        toppingArray[i] = value;
-        var addToppings = $(testPizza.addTopping(bacon));
-        console.log(testPizza.addTopping(bacon))
+      $(":checkbox:checked").each(function(i) {
+        var val = $(this).val();
+        var input2 = $(this).val();
+        console.log(val);
+        val = new Topping(input2, 3);
+        console.log(val.toppingName);
+
+
       });
+
 
       $(".display-topping").show();
 
       $(toppingArray).each(function(i){
         $(".display-topping").append("<li>" + toppingArray[i] + "</li>");
       });
-      console.log(toppingArray);
 
 
       event.preventDefault();
