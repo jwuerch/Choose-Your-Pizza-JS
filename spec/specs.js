@@ -1,9 +1,8 @@
 describe("Pizza", function() {
-  var myPizza = new Pizza("small", ["pineapple", "pepperoni", "bacon"]);
+  var myPizza = new Pizza("small");
 
   it("creates a new pizza of your choice called myPizza with desired diameter and toppings", function() {
     expect(myPizza.diameter).to.equal("small");
-    expect(myPizza.toppings).to.eql(["pineapple", "pepperoni", "bacon"]);
   });
 
   it("creates a new topping constructor with desired toppings", function() {
@@ -17,10 +16,10 @@ describe("Pizza", function() {
   });
 
   it("adds up total pizza price based on size and original input of toppings", function() {
-
-  };
-
-  it("calculates the total topping price without the base price", function() {
-    expect(myPizza.addTopping(pineapple)).to.equal(2.5)
+    expect(myPizza.totalPrice()).to.equal(11.5);
   });
+
+  // it("calculates the total topping price without the base price", function() {
+  //   expect(myPizza.addTopping(pineapple)).to.equal(2.5);
+  // });
 });
