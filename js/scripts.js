@@ -29,6 +29,6 @@ Pizza.prototype.sizePrice = function() {
 };
 
 Pizza.prototype.addTopping = function(topping) {
-  var toppingPrice = 0
-  return toppingPrice += topping.price;
+  var addToppingPrice = 0
+  return addToppingPrice += topping.price;
 };
