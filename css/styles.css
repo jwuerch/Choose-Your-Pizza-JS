@@ -7,12 +7,9 @@ h1 {
 }
 
 .choose-size {
-  height:300px;
+  height:200px;
 }
 
-.row {
-  height:300px;
-}
 
 
 h4 {
@@ -27,7 +24,7 @@ h4 {
   width:80%;
 }
 
-.choose-size {
+.row {
   padding-top:5px;
   padding-left:10px;
 }
@@ -55,4 +52,8 @@ p {
 
 #addTopBtn {
   margin-right: 10px;
+}
+
+.choose-toppings {
+  display:none;
 }
