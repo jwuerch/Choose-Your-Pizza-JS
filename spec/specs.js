@@ -20,17 +20,8 @@ describe("Pizza", function() {
     expect(myPizza.addTopping(sampleTopping)).to.equal(2.5);
   });
 
-  it("adds multiple toppings", function() {
-    expect(myPizza.addTopping(sampleTopping)).to.equal(5);
-    expect(myPizza.addTopping(sampleToppingTwo)).to.equal(8)
-  });
-
-  it("removes a topping", function() {
+  it("removes one topping", function() {
     expect(myPizza.removeTopping(sampleTopping)).to.equal(5.5);
-  });
-
-  it("removes an additional topping", function() {
-    expect(myPizza.removeTopping(sampleToppingTwo)).to.equal(2.5);
   });
 
 });
