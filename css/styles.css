@@ -42,10 +42,22 @@ p {
   padding-bottom:25px;
 }
 
-#addTopBtn {
-  margin-right: 10px;
+.row2 {
+  padding:10px;
+}
+
+.display-size {
+  margin-top:10px;
 }
 
 .choose-toppings {
+  display:none;
+}
+
+
+.display-toppings {
+  height:250px;
+}
+.row2 {
   display:none;
 }

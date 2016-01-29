@@ -24,26 +24,16 @@ Pizza.prototype.sizePrice = function() {
   return(basePrice)
 };
 
-
 Topping.prototype.addTopping = function() {
+  if (this.price === 0) {return 0}
   return totalToppingPrice += this.price;
 };
 
 Pizza.prototype.totalPrice = function() {
   return basePrice + totalToppingPrice;
 }
-
-
 /************************ jQuery *******************************/
 
-
-// /** Menu **/
-// var pineapple = new Topping("pineapple", 1);
-// var mushrooms = new Topping("mushrooms", 1);
-// var pepperoni = new Topping("pepperoni", 2);
-// var bacon = new Topping("bacon", 2);
-// var salmon = new Topping("salmon", 3);
-// var chorizo = new Topping("chorizo", 3);
 $(document).ready(function() {
   $("#sizeBtn").click(function() {
     $(".display-size").show();
@@ -54,13 +44,14 @@ $(document).ready(function() {
     var testPizza = new Pizza(input1);
     var testPizzaPrice = $(testPizza.sizePrice(input1));
     $(".spanSize").text(testPizza.diameter);
-
+    $(".row2").show();
+    $(".finalPrice").text(basePrice);
     $("#addTopBtn").click(function(event) {
-      var toppingArray = [];
       totalToppingPrice = 0;
+      var toppingArray = [];
       $(".display-topping").empty();
-      $(":checkbox:checked").each(function(i) {
-        var val = $(this).val()
+      $(":checkbox:checked").each(function() {
+        var val = $(this).val();
         var input2 = val;
         var input3 = "";
         /** Decides What input3 will be based on input2 **/
@@ -68,25 +59,20 @@ $(document).ready(function() {
           input3 = 2;
         } else if ((val === "pineapple") || (val === "mushrooms")) {
           input3 = 1;
-        } else {
+        } else if ((val === "chorizo") || (val === "salmon")) {
           input3 = 3;
-        };
-
+        } else {
+          input3 = 0;
+        }
         var testTopping = new Topping(input2,input3);
         testTopping.addTopping();
         $(".display-topping").append("<li>" + testTopping.toppingName + "</li>");
       });
+      if($("#frmtest input:checked").length > 1) {
+        totalToppingPrice = 0
+      }
+      $(".finalPrice").text(basePrice + totalToppingPrice);
       event.preventDefault();
     });
-
-
-
-
-
-
-
-  })
-
-
-
+  });
 });

@@ -26,34 +26,33 @@
               <option value="large">Large</option>
             </select>
             <button class="btn btn-primary" id="sizeBtn">Select Size</button>
-            <div class="display-size">
-              <p>You have selected a pizza of size <span class="spanSize"></span>.</p>
-            </div>
           </div>
         </div>
         <div class="col-sm-6">
           <div class="row">
             <div class="col-sm-12">
-              <div class="choose-toppings">
-                <h4 class="h4-2">Please select your toppings.</h4>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value="pineapple">Pineapple
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value="pepperoni">Pepperoni
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value="mushrooms">Mushrooms
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value="salmon">Salmon
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value="chorizo">Chorizo
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value="bacon">Bacon
-                </label>
+              <form id="frmCheck">
+                <div class="choose-toppings">
+                  <h4 class="h4-2">Please select your toppings.</h4>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="pineapple">Pineapple
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="pepperoni">Pepperoni
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="mushrooms">Mushrooms
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="salmon">Salmon
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="chorizo">Chorizo
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="bacon">Bacon
+                  </label>
+                </div>
               </div>
             </div>
             <div class="row">
@@ -71,13 +70,20 @@
       </div>
       <!-- /** End Row 1 **/ -->
 
-      <div class="row">
+      <div class="row row2">
         <div class="col-sm-6">
           <h4>Thank you for choosing your pizza!</h4>
+          <img class="img-responsive" src="img/pizza.jpg">
         </div>
         <div class="col-sm-6">
-          <div class="display-price">
+          <div class="display-size">
+            <p>You have selected a pizza of size <strong><span class="spanSize"></span></strong>.</p>
+          </div>
+          <div class="display-toppings">
             <p>Your current toppings are:<span class="display-topping"></span></p>
+          </div>
+          <div class="display-price">
+            <p>Your total price for your current pizza configuration is <strong><span class="finalPrice"></span> dollars</strong>.</p>
           </div>
         </div>
       </div>
