@@ -16,7 +16,7 @@ describe("Pizza", function() {
     expect(myPizza.sizePrice()).to.equal(5);
   });
 
-  it("changes price when adding 1 topping", function() {
-    expect(myPizza.addTopping("pineapple")).to.equal(2.50);
+  it("calculates the total topping price", function() {
+    expect
   });
 });

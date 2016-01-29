@@ -28,6 +28,10 @@ Pizza.prototype.sizePrice = function() {
 };
 
 Pizza.prototype.addTopping = function(topping) {
+  addToppingPrice = this.sizePrice + topping.price;
+  console.log(topping.price);
+  return addToppingPrice
 
-  return afterToppingPrice;
 }
+
+console.log(pineapple.price)
