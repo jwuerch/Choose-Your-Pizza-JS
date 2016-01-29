@@ -21,7 +21,7 @@ describe("Pizza", function() {
   });
 
   it("removes one topping and won't result in a negative topping price", function() {
-    expect(myPizza.removeTopping(sampleToppingTwo)).to.equal(0);
+    expect(sampleToppingTwo.removeTopping()).to.equal(0);
   });
 
   it("returns base price plus total topping price", function() {

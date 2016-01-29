@@ -29,11 +29,11 @@ Topping.prototype.addTopping = function() {
   return totalToppingPrice += this.price;
 };
 
-Pizza.prototype.removeTopping = function(topping) {
-  if (totalToppingPrice < topping.price) {
+Topping.prototype.removeTopping = function() {
+  if (totalToppingPrice < this.price) {
     totalToppingPrice = 0;
   } else {
-    totalToppingPrice = totalToppingPrice -= topping.price
+    totalToppingPrice = totalToppingPrice -= this.price
   };
   return totalToppingPrice;
 };
