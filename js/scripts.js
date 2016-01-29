@@ -45,22 +45,26 @@ Pizza.prototype.totalPrice = function() {
 
 /************************ jQuery *******************************/
 
-$(document).ready(function() {
 
+// /** Menu **/
+// var pineapple = new Topping("pineapple", 1);
+// var mushrooms = new Topping("mushrooms", 1);
+// var pepperoni = new Topping("pepperoni", 2);
+// var bacon = new Topping("bacon", 2);
+// var salmon = new Topping("salmon", 3);
+// var chorizo = new Topping("chorizo", 3);
+$(document).ready(function() {
   $("#sizeBtn").click(function() {
     basePrice = 0;
     var input1 = $("#choice").val();
     var testPizza = new Pizza(input1);
     var testPizzaPrice = $(testPizza.sizePrice(input1));
-    $(".spanSize").text(testPizza.diameter)
-
-
+    $(".spanSize").text(testPizza.diameter);
 
     $("#addTopBtn").click(function(event) {
-      var toppingArray = []
+      var toppingArray = [];
       totalToppingPrice = 0;
       $(".display-topping").empty();
-
       $(":checkbox:checked").each(function(i) {
         var val = $(this).val()
         var input2 = val;
@@ -72,20 +76,11 @@ $(document).ready(function() {
         } else {
           input3 = 3;
         };
-        var addMyTopping = new Topping(input2,input3);
-        console.log(addMyTopping);
-
-
+        var testTopping = new Topping(input2,input3);
+        testTopping.addTopping();
+        $(".display-topping").append("<li>" + testTopping.toppingName + "</li>");
+        console.log(totalToppingPrice);
       });
-
-
-      $(".display-topping").show();
-
-      $(toppingArray).each(function(i){
-        $(".display-topping").append("<li>" + toppingArray[i] + "</li>");
-      });
-
-
       event.preventDefault();
     });
 
