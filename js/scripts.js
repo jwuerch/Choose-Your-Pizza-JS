@@ -29,15 +29,6 @@ Topping.prototype.addTopping = function() {
   return totalToppingPrice += this.price;
 };
 
-Topping.prototype.removeTopping = function() {
-  if (totalToppingPrice < this.price) {
-    totalToppingPrice = 0;
-  } else {
-    totalToppingPrice = totalToppingPrice -= this.price
-  };
-  return totalToppingPrice;
-};
-
 Pizza.prototype.totalPrice = function() {
   return basePrice + totalToppingPrice;
 }
