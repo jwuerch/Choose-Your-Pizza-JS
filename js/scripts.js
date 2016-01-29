@@ -35,11 +35,9 @@ Pizza.prototype.removeTopping = function(topping) {
 /************************ jQuery *******************************/
 
 /** List of Toppings **/
-// var pineapple = new Topping("pineapple", 2.50);
-// var pepperoni = new Topping("pepperoni", 2);
-// var mushrooms = new Topping("mushrooms", 1.50);
-// var sausage = new Topping("sausage", 3);
-// var chorizo = new Topping("chorizo", 4);
-// var bacon = new Topping("bacon", 2);
-//
-// $("")
+var pineapple = new Topping("pineapple", 2.50);
+var pepperoni = new Topping("pepperoni", 2);
+var mushrooms = new Topping("mushrooms", 1.50);
+var sausage = new Topping("sausage", 3);
+var chorizo = new Topping("chorizo", 4);
+var bacon = new Topping("bacon", 2);
