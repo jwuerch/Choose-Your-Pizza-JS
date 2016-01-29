@@ -1,5 +1,7 @@
 describe("Pizza", function() {
-  it("does something", function() {
-    expect(0).to.equal(0);
+  var myPizza = new Pizza(10, ["pineapple", "pepperoni", "bacon"])
+  it("creates a new pizza of your choice called myPizza with desired diameter and toppings", function() {
+    expect(myPizza.diameter).to.equal(10);
+    expect(myPizza.toppings).to.eql(["pineapple", "pepperoni", "bacon"])
   });
 });
