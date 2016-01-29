@@ -31,11 +31,17 @@ Pizza.prototype.addTopping = function(topping) {
 
 Pizza.prototype.removeTopping = function(topping) {
   if (totalToppingPrice < topping.price) {
-    return 0
+    totalToppingPrice = 0;
   } else {
-  return totalToppingPrice -= topping.price
+    totalToppingPrice = totalToppingPrice -= topping.price
   };
+  console.log(totalToppingPrice);
+  return totalToppingPrice;
 };
+
+Pizza.prototype.totalPrice = function() {
+  return basePrice + totalToppingPrice;
+}
 
 
 /************************ jQuery *******************************/
