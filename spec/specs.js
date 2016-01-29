@@ -15,11 +15,7 @@ describe("Pizza", function() {
     expect(myPizza.sizePrice()).to.equal(5);
   });
 
-  it("adds up total pizza price based on size and original input of toppings", function() {
-    expect(myPizza.totalPrice()).to.equal(11.5);
+  it("calculates the total topping price without the base price", function() {
+    expect(myPizza.addTopping(pineapple)).to.equal(2.5);
   });
-
-  // it("calculates the total topping price without the base price", function() {
-  //   expect(myPizza.addTopping(pineapple)).to.equal(2.5);
-  // });
 });

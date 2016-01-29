@@ -26,17 +26,3 @@ Pizza.prototype.sizePrice = function() {
   };
   return pizzaPrice;
 };
-
-Pizza.prototype.totalPrice = function() {
-  console.log(this.toppings)
-  this.toppings.forEach(function(topping) {
-    console.log(topping.toppingName);
-  });
-};
-
-
-
-// Pizza.prototype.addTopping = function(topping) {
-//   var addToppingPrice = 0;
-//   return addToppingPrice += topping.price;
-// };
