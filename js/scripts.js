@@ -16,7 +16,7 @@ var chorizo = new Toppings("chorizo", 4);
 
 
 Pizza.prototype.sizePrice = function() {
-    var pizzaPrice = 0
+    var pizzaPrice = 0;
   if (this.diameter === "small") {
     pizzaPrice += 5;
   } else if (this.diameter === "medium") {
@@ -24,5 +24,10 @@ Pizza.prototype.sizePrice = function() {
   } else {
     pizzaPrice += 10;
   };
-  return pizzaPrice
+  return pizzaPrice;
 };
+
+Pizza.prototype.addTopping = function(topping) {
+
+  return afterToppingPrice;
+}
