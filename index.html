@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Jason's Pizza Company</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/scripts.js"></script>
   </head>
@@ -19,6 +19,15 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="choose-size">
+            <select class="form-control" id="choice">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+            <button class="btn btn-primary" id="sizeBtn">Select Size</button>
+          </div>
+          <div class="display-size">
+            <p>You have selected a pizza of size <span class="spanSize"></span>.</p>
           </div>
         </div>
         <div class="col-sm-6">
@@ -54,8 +63,8 @@
                 <input type="checkbox" value="bacon">Bacon
               </label>
             </div>
-            <button class="btn btn-success" id="addTopBtn">Add Toppings</button>
-            <button class="btn btn-danger" id="removeTopBtn">Remove Toppings</button>
+            <button type="submit" class="btn btn-success" id="addTopBtn">Add Toppings</button>
+            <button type="submit" class="btn btn-danger" id="removeTopBtn">Remove Toppings</button>
 
 
 
@@ -68,6 +77,9 @@
 
       <div class="row">
         <div class="col-sm-12">
+          <div class="display-price">
+            <p>Your current toppings are:<span class="display-topping"></span></p>
+          </div>
 
         </div>
       </div>
