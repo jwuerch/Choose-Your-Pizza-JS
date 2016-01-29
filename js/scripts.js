@@ -3,6 +3,11 @@ function Pizza(diameter, toppings) {
   this.toppings = toppings;
 }
 
+function Toppings(toppingName, price) {
+  this.toppingName = toppingName;
+  this.price = price;
+}
+
 
 Pizza.prototype.price = function() {
   var pizzaPrice = 0
