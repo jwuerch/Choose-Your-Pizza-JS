@@ -1,3 +1,5 @@
+var basePrice = 0
+
 function Pizza(diameter) {
   this.diameter = diameter;
 };
@@ -7,7 +9,6 @@ function Topping(toppingName, price) {
   this.price = price;
 };
 
-var basePrice = 0
 
 // var pineapple = new Topping("pineapple", 2.50);
 // var pepperoni = new Topping("pepperoni", 2);
@@ -31,4 +32,8 @@ Pizza.prototype.sizePrice = function() {
 
 Pizza.prototype.addTopping = function(topping) {
   return basePrice += topping.price;
+}
+
+Pizza.prototype.removeTopping = function(topping) {
+  return basePrice -= topping.price
 }

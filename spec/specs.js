@@ -26,6 +26,7 @@ describe("Pizza", function() {
   });
 
   it("removes a topping", function() {
-    expect(myPizza.removeTopping(sampleTopping)).to.equal(-2.5);
+    expect(myPizza.removeTopping(sampleTopping)).to.equal(5.5);
   });
+
 });
