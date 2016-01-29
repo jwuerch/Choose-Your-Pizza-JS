@@ -2,17 +2,17 @@ function Pizza(diameter) {
   this.diameter = diameter;
 };
 
-function Toppings(toppingName, price) {
+function Topping(toppingName, price) {
   this.toppingName = toppingName;
   this.price = price;
 };
 
-var pineapple = new Toppings("pineapple", 2.50);
-var pepperoni = new Toppings("pepperoni", 2);
-var mushrooms = new Toppings("mushrooms", 1.50);
-var sausage = new Toppings("sausage", 3);
-var chorizo = new Toppings("chorizo", 4);
-var bacon = new Toppings("bacon", 2);
+// var pineapple = new Topping("pineapple", 2.50);
+// var pepperoni = new Topping("pepperoni", 2);
+// var mushrooms = new Topping("mushrooms", 1.50);
+// var sausage = new Topping("sausage", 3);
+// var chorizo = new Topping("chorizo", 4);
+// var bacon = new Topping("bacon", 2);
 
 
 Pizza.prototype.sizePrice = function() {
@@ -26,3 +26,8 @@ Pizza.prototype.sizePrice = function() {
   };
   return pizzaPrice;
 };
+
+Pizza.prototype.addTopping = function(topping) {
+  var toppingPrice = 0
+  return toppingPrice += topping.price
+}
