@@ -15,7 +15,7 @@ var sausage = new Toppings("sausage", 3);
 var chorizo = new Toppings("chorizo", 4);
 
 
-Pizza.prototype.price = function() {
+Pizza.prototype.sizePrice = function() {
     var pizzaPrice = 0
   if (this.diameter === "small") {
     pizzaPrice += 5;
@@ -24,6 +24,5 @@ Pizza.prototype.price = function() {
   } else {
     pizzaPrice += 10;
   };
-  console.log(pizzaPrice);
   return pizzaPrice
 };

@@ -13,6 +13,6 @@ describe("Pizza", function() {
   });
 
   it("creates a prototype method for the cost of a pizza depending on selections", function() {
-    expect(myPizza.price()).to.equal(5);
+    expect(myPizza.sizePrice()).to.equal(5);
   });
 });
