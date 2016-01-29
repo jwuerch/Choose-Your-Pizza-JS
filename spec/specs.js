@@ -1,6 +1,7 @@
 describe("Pizza", function() {
   var myPizza = new Pizza("small");
   var sampleTopping = new Topping("pineapple", 2.5)
+  var sampleToppingTwo = new Topping("chorizo", 3)
 
   it("creates a new pizza of your choice called myPizza with desired diameter and toppings", function() {
     expect(myPizza.diameter).to.equal("small");
@@ -19,7 +20,10 @@ describe("Pizza", function() {
     expect(myPizza.addTopping(sampleTopping)).to.equal(2.5);
   });
 
-  it
+  it("adds multiple toppings", function() {
+    expect(myPizza.addTopping(sampleTopping)).to.equal(5);
+    expect(myPizza.addTopping(sampleToppingTwo)).to.equal(8)
+  });
 
   it("removes a topping", function() {
     expect(myPizza.removeTopping(sampleTopping)).to.equal(-2.5);
