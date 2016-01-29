@@ -8,6 +8,7 @@ describe("Pizza", function() {
 
   it("creates a new topping constructor with desired toppings", function() {
     expect(myToppings.toppingName).to.equal("Pineapple");
+    expect(myToppings.price).to.equal(2.50);
   });
 
   it("creates a prototype method for the cost of a pizza depending on selections", function() {
