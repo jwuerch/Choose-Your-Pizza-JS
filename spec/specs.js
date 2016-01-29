@@ -1,9 +1,9 @@
 describe("Pizza", function() {
-  var myPizza = new Pizza(10, ["pineapple", "pepperoni", "bacon"]);
+  var myPizza = new Pizza("small", ["pineapple", "pepperoni", "bacon"]);
   var myToppings = new Toppings("pineapple", 2.50);
 
   it("creates a new pizza of your choice called myPizza with desired diameter and toppings", function() {
-    expect(myPizza.diameter).to.equal(10);
+    expect(myPizza.diameter).to.equal("small");
     expect(myPizza.toppings).to.eql(["pineapple", "pepperoni", "bacon"]);
   });
 
@@ -13,7 +13,6 @@ describe("Pizza", function() {
   });
 
   it("creates a prototype method for the cost of a pizza depending on selections", function() {
-    expect(myPizza.price).to.equal(15);
-
+    expect(myPizza.price()).to.equal(5);
   });
 });

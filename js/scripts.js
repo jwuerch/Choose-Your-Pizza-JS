@@ -15,17 +15,15 @@ var sausage = new Toppings("sausage", 3);
 var chorizo = new Toppings("chorizo", 4);
 
 
-Pizza.prototype.price = function(toppingsList) {
-  var toppingsArray = [];
-  var pizzaPrice = 0;
-  /** Conditional Statement For Pizza Size **/
-  if (this.diameter = "small") {
+Pizza.prototype.price = function() {
+    var pizzaPrice = 0
+  if (this.diameter === "small") {
     pizzaPrice += 5;
-  } else if (this.diameter = "medium") {
+  } else if (this.diameter === "medium") {
     pizzaPrice += 7;
   } else {
     pizzaPrice += 10;
   };
+  console.log(pizzaPrice);
   return pizzaPrice
-
 };
