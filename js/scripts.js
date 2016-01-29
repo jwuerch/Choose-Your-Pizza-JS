@@ -1,6 +1,6 @@
 function Pizza(diameter, toppings) {
   this.diameter = diameter;
-  this.toppings = toppings;
+  this.toppings = toppings
 };
 
 function Toppings(toppingName, price) {
@@ -13,6 +13,7 @@ var pepperoni = new Toppings("pepperoni", 2);
 var mushrooms = new Toppings("mushrooms", 1.50);
 var sausage = new Toppings("sausage", 3);
 var chorizo = new Toppings("chorizo", 4);
+var bacon = new Toppings("bacon", 2);
 
 
 Pizza.prototype.sizePrice = function() {
@@ -28,10 +29,6 @@ Pizza.prototype.sizePrice = function() {
 };
 
 Pizza.prototype.addTopping = function(topping) {
-  addToppingPrice = this.sizePrice + topping.price;
-  console.log(topping.price);
-  return addToppingPrice
-
-}
-
-console.log(pineapple.price)
+  var toppingPrice = 0
+  return toppingPrice += topping.price;
+};
