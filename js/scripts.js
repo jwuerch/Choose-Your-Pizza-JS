@@ -1,5 +1,6 @@
 /** Giving Pizza a base price of 0 **/
 var basePrice = 0;
+var totalToppingPrice = 0;
 
 /** Creation of Constructor Functions **/
 function Pizza(diameter) {
@@ -25,12 +26,17 @@ Pizza.prototype.sizePrice = function() {
 
 
 Pizza.prototype.addTopping = function(topping) {
-  return basePrice += topping.price;
+  return totalToppingPrice += topping.price;
 };
 
 Pizza.prototype.removeTopping = function(topping) {
-  return basePrice -= topping.price
+  if (totalToppingPrice < topping.price) {
+    return 0
+  } else {
+  return totalToppingPrice -= topping.price
+  };
 };
+
 
 /************************ jQuery *******************************/
 
@@ -44,29 +50,46 @@ $(document).ready(function() {
   var bacon = new Topping("bacon", 2);
 
   $("#sizeBtn").click(function() {
-    basePrice = 0
+    basePrice = 0;
+    var toppingArray = []
     var input1 = $("#choice").val();
     var testPizza = new Pizza(input1);
     var testPizzaPrice = $(testPizza.sizePrice(input1));
     $(".spanSize").text(testPizza.diameter)
     console.log("base price is " + basePrice)
+
+
+
+    $("#addTopBtn").click(function(event) {
+      $(".display-topping").empty();
+
+      $(":checkbox:checked").each(function(i){
+        var value = $(this).val();
+        console.log(value);
+        toppingArray[i] = value;
+        var addToppings = $(testPizza.addTopping(bacon));
+        console.log(testPizza.addTopping(bacon))
+      });
+
+      $(".display-topping").show();
+
+      $(toppingArray).each(function(i){
+        $(".display-topping").append("<li>" + toppingArray[i] + "</li>");
+      });
+      console.log(toppingArray);
+
+
+      event.preventDefault();
+    });
+
+
+
+
+
+
+
   })
 
 
-  $("#addTopBtn").click(function(event) {
-    $(".display-topping").empty();
-      var toppingArray = []
-    $(":checkbox:checked").each(function(i){
-      toppingArray[i] = $(this).val();
-    });
-    $(".display-topping").show();
-    $(toppingArray).each(function(i){
-      $(".display-topping").append("<li>" + toppingArray[i] + "</li>");
-    });
-    console.log(toppingArray);
-
-
-    event.preventDefault();
-  });
 
 });

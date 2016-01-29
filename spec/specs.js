@@ -17,11 +17,11 @@ describe("Pizza", function() {
   });
 
   it("adds one topping", function() {
-    expect(myPizza.addTopping(sampleTopping)).to.equal(7.5);
+    expect(myPizza.addTopping(sampleTopping)).to.equal(2.5);
   });
 
-  it("removes one topping", function() {
-    expect(myPizza.removeTopping(sampleToppingTwo)).to.equal(4.5);
+  it("removes one topping and won't result in a negative topping price", function() {
+    expect(myPizza.removeTopping(sampleToppingTwo)).to.equal(0);
   });
 
 });
