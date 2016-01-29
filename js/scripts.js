@@ -29,5 +29,5 @@ Pizza.prototype.sizePrice = function() {
 
 Pizza.prototype.addTopping = function(topping) {
   var toppingPrice = 0
-  return toppingPrice += topping.price
+  console.log(toppingPrice += topping.price)
 }
