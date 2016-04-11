@@ -1,16 +1,19 @@
-# Readme File
-
-## About The Author
-
-The author is Jason Wuerch. He is currently located in Portland, Oregon as an up-and-coming programmer.
-
-## Pizza
-
-This project was made at Epicodus Coding School and is the final project of week 4.
+# Select Your Pizza
 
 ## Description
 
-This project allows you to determine the price of your desired pizza.
+This project allows you to determine the price of your desired pizza based on size and toppings used.
+
+## Installation Instructions
+
+* _Clone this repository_
+* _Open 'index.html'_
+* _Follow the instructions on screen to select desired pizza_
+* 
+
+## Technologies Used
+
+_Javascript, jQuery, Bootstrap, CSS, HTML_
 
 ## Copyright and License Information
 
